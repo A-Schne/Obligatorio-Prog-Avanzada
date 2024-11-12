@@ -15,7 +15,16 @@ pipeline {
             steps {
                 dir('USQL') {
                     echo 'Building USQL :)'
-                    bat 'C:\\Users\\Agust\\AppData\\Local\\Programs\\Python\\Python313\\python.exe -m pydoc -w trivia_game'
+                    bat 'C:\\Users\\Agust\\AppData\\Local\\Programs\\Python\\Python313\\python.exe -m pydoc -w USQL'
+                    bat 'dir'
+                }
+            }
+        }
+        stage('Build concurrencia') {
+            steps {
+                dir('USQL') {
+                    echo 'Building USQL :)'
+                    bat 'C:\\Users\\Agust\\AppData\\Local\\Programs\\Python\\Python313\\python.exe -m pydoc -w concurrencia'
                     bat 'dir'
                 }
             }
