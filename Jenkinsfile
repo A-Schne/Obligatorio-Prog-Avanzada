@@ -24,7 +24,6 @@ pipeline {
         stage('Build concurrencia') {
             steps {
                 dir('concurrencia') {
-                    bat 'C:/Users/Agust/AppData/Local/Programs/Python/Python313/python.exe -m pip install -r requirements.txt'
                     echo 'Building Concurrencia :)'
                     bat '"C:\\Program Files\\Java\\jdk-21\\bin\\javadoc.exe" -d docs *.java'
                     bat 'dir'
