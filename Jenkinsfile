@@ -5,7 +5,7 @@ pipeline {
             steps {
                 dir('trivia_game') {
                     echo 'Building trivia :)'
-                    bat 'C:\\Users\\Agust\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe -m pydoc -w trivia_game'
+                    bat 'C:\Users\Agust\AppData\Local\Programs\Python\Python313\python.exe -m pydoc -w trivia_game'
                     bat 'dir'
                 }
             }
@@ -14,7 +14,7 @@ pipeline {
             steps {
                 dir('USQL') {
                     echo 'Building USQL :)'
-                    bat 'C:\\Users\\Agust\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe -m pydoc -w USQL'
+                    bat 'C:\Users\Agust\AppData\Local\Programs\Python\Python313\python.exe -m pydoc -w USQL'
                     bat 'dir'
                 }
             }
