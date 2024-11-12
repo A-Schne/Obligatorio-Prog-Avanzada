@@ -1,30 +1,29 @@
-pipeline{
+pipeline {
     agent any
-    stages{
-        stage('Build trivia'){
+    stages {
+        stage('Build Trivia') {
             steps {
                 dir('trivia_game') {
-                    echo 'building trivia :)'
-                    sh 'python3 -m pydoc -w trivia_game'
-                    sh 'ls -l'
+                    echo 'Building trivia :)'
+                    bat 'python -m pydoc -w trivia_game'
+                    bat 'dir'
                 }
             }
         }
-        stage('Build USQL'){
+        stage('Build USQL') {
             steps {
                 dir('USQL') {
-                    echo 'building USQL :)'
-                    sh 'python3 -m pydoc -w USQL'
-                    sh 'ls -l'
+                    echo 'Building USQL :)'
+                    bat 'python -m pydoc -w USQL'
+                    bat 'dir'
                 }
             }
         }
-        stage('Archivar'){
-            steps{
+        stage('Archivar') {
+            steps {
                 archiveArtifacts allowEmptyArchive: true, artifacts: 'trivia_game/trivia_game.html'
                 archiveArtifacts allowEmptyArchive: true, artifacts: 'USQL/USQL.html'
             }
-            
         }
     }
 }
