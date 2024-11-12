@@ -3,14 +3,20 @@ pipeline{
     stages{
         stage('Build trivia'){
             steps {
-                echo 'building trivia :)'
-                sh 'python -m pydoc -w trivia_game/trivia_game'
+                dir('trivia_game') {
+                    echo 'building trivia :)'
+                    sh 'python3 -m pydoc -w trivia_game'
+                    sh 'ls -l'
+                }
             }
         }
         stage('Build USQL'){
             steps {
-                echo 'building USQL :)'
-                sh 'python -m pydoc -w USQL/USQL'
+                dir('USQL') {
+                    echo 'building USQL :)'
+                    sh 'python3 -m pydoc -w USQL'
+                    sh 'ls -l'
+                }
             }
         }
         stage('Archivar'){
