@@ -30,6 +30,6 @@ function abrirDocumentacion() {
         </html>
     `);
     
-    nuevaVentana.document.close(); // Finaliza la escritura para mostrar la ventana
+    nuevaVentana.document.close();
 }
 
