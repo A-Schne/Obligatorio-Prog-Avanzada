@@ -34,7 +34,8 @@ pipeline {
         stage('Archivar') {
             steps {
                 archiveArtifacts allowEmptyArchive: true, artifacts: 'trivia_game/trivia_game.html'
-                archiveArtifacts allowEmptyArchive: true, artifacts: 'USQL/USQL.html'
+                archiveArtifacts allowEmptyArchive: true, artifacts: 'USQL/ESP_ENG.html'
+                archiveArtifacts allowEmptyArchive: true, artifacts: 'concurrencia/docs/**/*.html'
             }
         }
     }
